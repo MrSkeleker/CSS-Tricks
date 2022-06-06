@@ -1,0 +1,41 @@
+@mixin hueRotation() {
+    animation: color-change 4s linear infinite;
+}
+
+@mixin blurryHueRotation() {
+    animation: blurry-color-change 4s linear infinite;
+}
+
+@mixin oscillation() {
+    animation: oscillate 3s ease-in-out infinite;
+}
+
+@keyframes color-change {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes blurry-color-change {
+    0% {
+        filter: hue-rotate(0deg) blur(50px);
+    }
+    100% {
+        filter: hue-rotate(360deg) blur(50px);
+    }
+}
+
+@keyframes oscillate {
+    0% {
+        transform: translateZ(-100px);
+    }
+    50% {
+        transform: translateZ(100px);
+    }
+    100% {
+        transform: translateZ(-100px);
+    }
+}

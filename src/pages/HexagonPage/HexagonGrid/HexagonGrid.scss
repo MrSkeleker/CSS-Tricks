@@ -1,0 +1,15 @@
+.hexagon-grid {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    &__row {
+        display: inline-flex;
+        margin-top: -28px;
+        margin-left: -50px;
+    }
+
+    &__row:nth-child(even) {
+        margin-left: 1px;
+    }
+}

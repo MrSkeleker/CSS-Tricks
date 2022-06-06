@@ -1,0 +1,7 @@
+@use 'styles/variables/colors' as colors;
+
+.app {
+    position: relative;
+    background: colors.$black_1000;
+    min-height: 100vh;
+}

@@ -1,0 +1,34 @@
+@use 'styles/variables/colors' as colors;
+@use 'styles/mixins/mediaQueries' as medias;
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    z-index: 10;
+
+    &__title {
+        margin: 0;
+        font-size: 40px;
+        background-image: linear-gradient(to right, colors.$green_600, colors.$blue_600, colors.$purple_600);
+        background-clip: text;
+        color: transparent;
+
+        @include medias.sm {
+            font-size: 64px;
+        }
+    }
+
+    &__actions {
+        display: none;
+        position: absolute;
+        left: 30px;
+
+        @include medias.sm {
+            display: inline-flex;
+        }
+    }
+}

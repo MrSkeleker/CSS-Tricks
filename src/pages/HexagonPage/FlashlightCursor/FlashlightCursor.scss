@@ -1,0 +1,11 @@
+@use 'styles/variables/colors' as colors;
+@use 'styles/mixins/animations' as animations;
+
+.flashlight-cursor {
+    @include animations.blurryHueRotation();
+
+    background: colors.$green_400;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

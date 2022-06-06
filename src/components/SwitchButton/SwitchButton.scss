@@ -1,0 +1,65 @@
+@use 'styles/variables/colors' as colors;
+@use 'styles/mixins/mediaQueries' as medias;
+
+.switch-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    pointer-events: visible;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+
+    background: colors.$black_1000;
+    border: 3px solid colors.$white_1000;
+    color: colors.$white_1000;
+
+    &:hover {
+        border-color: colors.$green_600;
+        color: colors.$green_600;
+    }
+
+    @include medias.sm {
+        width: auto;
+        margin: 0 20px;
+    }
+
+    &__icon {
+        margin-left: 10px;
+
+        &--spin {
+            animation: spin .5s ease-out forwards;
+        }
+    }
+
+    &--active {
+        border-color: colors.$green_400;
+        color: colors.$green_400;
+
+        &:hover {
+            border-color: colors.$red_600;
+            color: colors.$red_600;
+        }
+    }
+
+    &:disabled {
+        border-color: colors.$black_600;
+        color: colors.$black_600;
+        cursor: not-allowed;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
