@@ -1,0 +1,16 @@
+@use 'styles/variables/colors' as colors;
+
+#scrolling-text-page {
+    main {
+        display: flex;
+    }
+
+    .scrolling-text--bottom {
+        font-size: 14px;
+        color: colors.$green_400;
+        line-height: unset;
+        height: auto;
+        width: 350px;
+        overflow: unset;
+    }
+}

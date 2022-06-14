@@ -12,6 +12,10 @@
     pointer-events: none;
     z-index: 10;
 
+    .content {
+        pointer-events: visible;
+    }
+
     @include medias.sm {
         flex-direction: row;
     }

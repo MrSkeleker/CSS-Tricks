@@ -10,6 +10,14 @@
     animation: oscillate 3s ease-in-out infinite;
 }
 
+@mixin moveTo($direction) {
+    @if $direction == left {
+        animation: moveToLeft 60s linear infinite;
+    } @else if $direction == right {
+        animation: moveToRight 60s linear infinite;
+    }
+}
+
 @keyframes color-change {
     0% {
         filter: hue-rotate(0deg);
@@ -37,5 +45,24 @@
     }
     100% {
         transform: translateZ(-100px);
+    }
+}
+
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%)
     }
 }

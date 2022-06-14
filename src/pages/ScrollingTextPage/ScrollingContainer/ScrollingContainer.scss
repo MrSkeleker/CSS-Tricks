@@ -1,0 +1,15 @@
+@use 'styles/variables/colors' as colors;
+
+.scrolling-container {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: colors.$white_1000;
+    background: colors.$black_1000;
+
+    &--even {
+        color: colors.$black_1000;
+        background: colors.$white_1000;
+    }
+}

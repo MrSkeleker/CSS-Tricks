@@ -1,0 +1,12 @@
+@use 'styles/mixins/animations' as animations;
+
+.scrolling-text {
+    @include animations.moveTo(left);
+
+    position: absolute;
+    white-space: nowrap;
+    line-height: 100vh;
+    font-size: 12em;
+    overflow: hidden;
+    margin: 0;
+}

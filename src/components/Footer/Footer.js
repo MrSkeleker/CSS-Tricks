@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import "./Footer.scss";
 
 export const Footer = ({ children }) => (
-    <footer className="footer">{children}</footer>
+    <footer className="footer">
+        <div className="content">{children}</div>
+    </footer>
 );
 
 Footer.propTypes = {
